@@ -1,83 +1,192 @@
+*{
+  box-sizing: border-box; /* sirve para aumentar un borde a cada lado de los elementos tipo bloque ejemplo nav header section*/
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+
+p{
+  color: black;
+}
+
+header{
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: white;
+}
+
+a{
+  display: inline-block; /* ???????*/
+}
+
+
+
+
+header .container{
+  display: flex; /*display cambia el comportamiento de un elemento y flex permite aprovechar el espacio para acomodar a los hijos del elemento*/
+  justify-content: space-between; /* justify-content organiza los elementos respecto al eje x y space-between sirve para hacer que los hijos de este contenedor se organicen en la misma linea y se ajusten al ancho de la pagina */
+  align-items: center;
+}
+
+header .container .logo{
+  width: 100px;
+}
+
+header .container a{
+  color: red;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+
+
+
+
+
+
+
+#inicio{
+  position: relative; /* se configura para que esto ocupe espacio y para que pueda ocupar la posicion absoluta del inicio .bloque-inicio*/
+
+}
+
+#inicio .bloque-inicio{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 400px;
+  text-align: center;
+  margin-left: -200px;
+}
+
+#inicio .bloque-inicio h1{
+  color: white;
+  font-size: 35px;
+}
+
+#inicio .bloque-inicio p{
+  color: white;
+  font-size: 16px;
+}
+
+#inicio img{
+  width: 100%;
+  display: block;
+}
+
+
+.boton{
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.boton-rojo{
+  color: white;
+  background-color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .container{
-    border-width: 0px;
-    border-color: #d720a6;
-    border-style: solid;
+  width: 1140px;
+  margin: 0 auto; /*margen arriba y abajo en 0 y a los lados automatico */
+  padding: 0 15px;
   }
 
-  .row{
-    border-width: 0px;
-    border-color: #37a357;
-    border-style: solid;
-  }
 
-  .columna-33{
-    border-width: 0px;
-    border-color: #5e2fb6;
-    border-style: solid;
-  }
+.row{
+  border-width: 0px;
+  border-color: #37a357;
+  border-style: solid;
+}
 
-  .bloque-inicio{
-    border-width: 0px;
-    border-color: #b3c32c;
-    border-style: solid;
-  } 
 
-  .bloque-servicio{
-    border-width: 0px;
-    border-color: #575859;
-    border-style: solid;
-  } 
+.columna-33{
+  border-width: 0px;
+  border-color: #5e2fb6;
+  border-style: solid;
+}
 
-  .bloque-img-servicio{
-    border-width: 0px;
-    border-color: #042341;
-    border-style: solid;
-  } 
 
-  .bloque-contenido-servicio{
-    border-width: 0px;
-    border-color: #0c4642;
-    border-style: solid;
-  } 
+.bloque-inicio{
+  border-width: 0px;
+  border-color: #b3c32c;
+  border-style: solid;
+} 
 
-  .container-fluid{
-    border-width: 0px;
-    border-color: #513707;
-    border-style: solid;
-  } 
 
-  .cuadrado{
-    border-width: 0px;
-    border-color: #3aa6c4;
-    border-style: solid;
-  } 
+.bloque-servicio{
+  border-width: 0px;
+  border-color: #575859;
+  border-style: solid;
+} 
 
-  .columna-50{
-    border-width: 0px;
-    border-color: #020202;
-    border-style: solid;
-  } 
 
-  .form-control{
-    border-width: 0px;
-    border-color: #c90c0c;
-    border-style: solid;
-  } 
+.bloque-img-servicio{
+  border-width: 0px;
+  border-color: #042341;
+  border-style: solid;
+} 
 
-  .form-block{
-    border-width: 0px;
-    border-color: #09fc01;
-    border-style: solid;
-  } 
 
-  .columna-25{
-    border-width: 0px;
-    border-color: #09fc01;
-    border-style: solid;
-  } 
+.bloque-contenido-servicio{
+  border-width: 0px;
+  border-color: #0c4642;
+  border-style: solid;
+} 
 
-  .logo-footer{
-    border-width: 0px;
-    border-color: #09fc01;
-    border-style: solid;
-  } 
+
+.container-fluid{
+  border-width: 0px;
+  border-color: #513707;
+  border-style: solid;
+} 
+
+
+.cuadrado{
+  border-width: 0px;
+  border-color: #3aa6c4;
+  border-style: solid;
+} 
+
+
+.columna-50{
+  border-width: 0px;
+  border-color: #020202;
+  border-style: solid;
+} 
+
+
+.form-control{
+  border-width: 0px;
+  border-color: #c90c0c;
+  border-style: solid;
+} 
+
+
+.form-block{
+  border-width: 0px;
+  border-color: #09fc01;
+  border-style: solid;
+} 
+
+
+.columna-25{
+  border-width: 0px;
+  border-color: #09fc01;
+  border-style: solid;
+} 
+
+
+.logo-footer{
+  border-width: 0px;
+  border-color: #09fc01;
+  border-style: solid;
+} 
