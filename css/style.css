@@ -1,3 +1,7 @@
+
+  /*identificacion de elemento
+  border: 1px solid rgb(7, 219, 7);*/
+
 *{
   box-sizing: border-box; /* sirve para aumentar un borde a cada lado de los elementos tipo bloque ejemplo nav header section*/
 }
@@ -11,6 +15,10 @@ p{
   color: black;
 }
 
+a{
+  display: inline-block; /* ???????*/
+}
+
 header{
   padding: 15px 0;
   position: fixed;
@@ -20,13 +28,6 @@ header{
   z-index: 2;
   background-color: white;
 }
-
-a{
-  display: inline-block; /* ???????*/
-}
-
-
-
 
 header .container{
   display: flex; /*display cambia el comportamiento de un elemento y flex permite aprovechar el espacio para acomodar a los hijos del elemento*/
@@ -44,16 +45,8 @@ header .container a{
   margin: 0 15px;
 }
 
-
-
-
-
-
-
-
 #inicio{
   position: relative; /* se configura para que esto ocupe espacio y para que pueda ocupar la posicion absoluta del inicio .bloque-inicio*/
-
 }
 
 #inicio .bloque-inicio{
@@ -80,113 +73,216 @@ header .container a{
   display: block;
 }
 
-
 .boton{
   text-align: center;
   text-decoration: none;
   padding: 15px 20px;
+  border: none;
 }
 
-.boton-rojo{
+.boton.boton-rojo{
   color: white;
   background-color: red;
   font-size: 20px;
   font-weight: bold;
 }
 
+.boton.boton-rojo:hover {
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+.boton.boton-blanco{
+  color: #ff0000;
+  background-color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #ff0000;
+}
+
+.boton.boton-negro{
+  color: white;
+  background-color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.boton.boton-negro:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
 .container{
   width: 1140px;
-  margin: 0 auto; /*margen arriba y abajo en 0 y a los lados automatico */
   padding: 0 15px;
-  }
-
-
-.row{
-  border-width: 0px;
-  border-color: #37a357;
-  border-style: solid;
+  margin: 0 auto; /*margen arriba y abajo en 0 y a los lados automatico */
+  position: relative;
 }
-
-
-.columna-33{
-  border-width: 0px;
-  border-color: #5e2fb6;
-  border-style: solid;
-}
-
-
-.bloque-inicio{
-  border-width: 0px;
-  border-color: #b3c32c;
-  border-style: solid;
-} 
-
-
-.bloque-servicio{
-  border-width: 0px;
-  border-color: #575859;
-  border-style: solid;
-} 
-
-
-.bloque-img-servicio{
-  border-width: 0px;
-  border-color: #042341;
-  border-style: solid;
-} 
-
-
-.bloque-contenido-servicio{
-  border-width: 0px;
-  border-color: #0c4642;
-  border-style: solid;
-} 
-
 
 .container-fluid{
-  border-width: 0px;
-  border-color: #513707;
-  border-style: solid;
-} 
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
 
+.seccion_nos_serv{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
-.cuadrado{
-  border-width: 0px;
-  border-color: #3aa6c4;
-  border-style: solid;
-} 
+#nosotros{
+  background-image: url(https://www.diariodesevilla.es/2022/03/08/sociedad/Coca-Cola_1663344915_153413535_667x375.jpg); /* imagen de fondo */
+  background-size: cover; /* para aprovechar por completo el tamaño de la imagen */
+  color: white; /* texto color blanco */
+  text-align: center;
+}
 
+#nosotros p{
+  color: white; /* texto color blanco */
+  font-size: 16px;
+  margin: 0; /*esto es para crear una margen de 0 en la seccion de nosotros*/
+}
+
+.row{
+  display: flex;/* esta propiedad se aplica a row ya que queremos que los div clase columna se ajusten respecto a row, es para aprovechar los 1140px que tenemos de la pagina - esto hace que cada columna se ponga al lado de cada una aprovechando el espacio*/
+  flex-wrap: wrap;/* si una de las columnos nollega a entrar por su ancho lo que hace es que esa columna se va hacia abajo.*/
+  /*nowrap - haria que todas las columnas se ubiquen en una linea lo que es un problema si son muchas columnas*/
+  margin-left: -15px;/* para ajustar los row y alinearlos con el logo y demas elementos*/
+  margin-right: -15px;
+}
+
+.columna{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.columna-33{
+  width: 33.33%;
+}
 
 .columna-50{
-  border-width: 0px;
-  border-color: #020202;
-  border-style: solid;
+  width: 41.66%;
+}
+
+.empujar-50{
+  margin-left: 58.33%;
+}
+
+.empujar-0{
+  margin-left: 0;
+}
+
+#servicios .bloque-servicio{
+  border: 1px solid grey;
 } 
 
+#servicios .bloque-servicio .bloque-img-servicio img{
+  width: 100%;
+}
 
-.form-control{
-  border-width: 0px;
-  border-color: #c90c0c;
-  border-style: solid;
-} 
+#servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto{
+  padding-bottom: 56.25%;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio{
+  text-align: justify;
+  padding: 15px;
+  margin-top: 0;
+  font-size: 15px;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio h3{
+  margin-top: 0;
+  font-size: 20px;
+}
 
 
-.form-block{
-  border-width: 0px;
-  border-color: #09fc01;
-  border-style: solid;
-} 
+.cuadrado-perfecto{
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+}
 
+.cuadrado-perfecto img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-.columna-25{
-  border-width: 0px;
-  border-color: #09fc01;
-  border-style: solid;
-} 
+#galeria h4{
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  top: 40%;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+}
 
+#galeria img{
+  filter: grayscale(1);
+}
 
-.logo-footer{
-  border-width: 0px;
-  border-color: #09fc01;
-  border-style: solid;
-} 
+#galeria .cuadrado-perfecto:hover img{
+  filter: grayscale(0);
+}
+
+#galeria .cuadrado-perfecto:hover h4{
+  display: none;
+}
+
+#contactenos{
+  position: relative;
+}
+
+#contactenos iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+}
+
+#contactenos form{
+  padding: 60px;
+  margin: 60px;
+  background-color: red;
+}
+
+#contactenos form .form-block{
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+#contactenos:hover iframe{
+  filter: grayscale(0);
+}
+
+#contactenos form .form-block .form-control{
+  display: block;
+  height: 40px;
+  font-size: 16px;
+  border: 1px solid gray;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+#contactenos form .form-block textarea{
+  display: block;
+  height: 100px;
+  font-size: 16px;
+  border: 1px solid gray;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+#contactenos form .form-block.bloque-ultimo{
+  margin-bottom: 0;
+}
